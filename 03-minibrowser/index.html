@@ -1,0 +1,54 @@
+<!-- <main>
+    <header>
+        <div class="close-area"></div>
+        <input placeholder="https://..." value="https://mariosouto.com" />
+    </header>
+    <iframe src="https://mariosouto.com"></iframe>
+</main> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Browser Experimental</title>
+</head>
+<body>
+    
+
+
+<script>
+    // Objetos: Representa coisas com multiplos atributos pra representá-las
+    var aba1 = {
+        titulo: 'Titulo da aba 1',
+        url: 'https://docs.google.com/presentation/d/1aIgQYbR0uYP1fbGP2bJIfNC3nRu2Lw7lE_ss7onGte0/edit#slide=id.g118ada4d432_0_172',
+    };
+    var aba2 = {
+        titulo: 'Titulo da aba 2',
+        url: 'https://docs.google.com/spreadsheets/d/1aTy82uPXVvcIAMThKwepvRc_q0unBAq1f7UzBmXy6PI/edit#gid=1861945403',
+    };
+
+    // [ENTRADA]
+    // Arrays: Listas de coisas
+    const abas = [
+        aba1,
+        aba2
+    ];
+    // [PROCESSAMENTO]
+    for(aba of abas) {
+        console.log(aba.titulo);
+        // [OUTPUT]
+        var valorAtualDoHTML = document.body.innerHTML;
+        document.body.innerHTML = valorAtualDoHTML + `<li><a href="${aba.url}">${aba.titulo}<a/></li>`;
+    }
+
+
+    // O que tem em uma aba do navegador?
+    // [ ] titulo
+    // [X] url
+</script>
+<!-- <link rel="stylesheet" href="./style.css" /> -->
+
+</body>
+</html>
